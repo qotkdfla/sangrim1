@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> 
+        나의 웹페이지
+    </title>
+   
+    <style>
+
+html, body{height: 100%; font-family: Arial, Helvetica, sans-serif;}
+header {padding: 20px; background-color: olive; color: white;}
+nav{padding: 5px; background-color:cadetblue; color: white;}
+aside{background-color: bisque; width: 35%; float: right;text-align: center;}
+section{  width: 65%; float: left; text-align: center;}
+
+footer{background-color: rgb(172, 172, 172); clear: both; text-align: center;}
+nav ul li {display: inline; margin-right: 10px;}
+aside ul li {margin-right: 10px;}
+
+a:link {color: #ffffff; text-decoration:none;}
+a:visited {color: #ffffff;}
+a:hover {color: rgb(215, 215, 215); }
+
+input[type=button] {
+    padding: 0.3em;
+    background-color: cadetblue; 
+    color: white;
+    border: cadetblue;
+    border-radius: 5px;
+    width: 10%;
+}
+input[type=submit] {
+    padding: 0.3em;
+    background-color: cadetblue; 
+    color: white;
+    border: cadetblue;
+    border-radius: 5px;
+    width: 10%;
+}
+
+input[type=submit]:hover{ background-color: rgb(89, 142, 144); color: rgb(215, 215, 215); }
+input[type=button]:hover{ background-color: rgb(89, 142, 144); color: rgb(215, 215, 215); }
+
+#n img{width: 20%; height: 20%; margin: 3px;  box-shadow: 0px 2px 5px gray; }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <header>
+        <h1><a href="index.html"> Veggig Shop</a></h1>
+    </header>
+    
+<nav>
+    <ul>
+            <li><a href = "index.html#fruits"> Fresh Fruits </a></li>
+            <li><a href = "index.html#veggies"> Fresh Veggies </a></li>
+            <li><a href="index.html#salads">Fresh Salads</a></li>
+            <li><a href="Nuts.html">Seeds and Nuts</a></li>
+            <li><a href="GiftBox.html">Gift Box</a></li>
+            <li><a href="BMI.html">BMI계산기</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="membership.html">회원가입</a></li>
+    </ul>
+</nav>
+   
+
+ 
+
+<section>
+<article id="a">
+    
+    <h2>건강을 위한, 하루 견과류 섭취!</h2>
+    <img src = "image/nuts1.jpg" width="50%" style="float:left;">
+
+    <form style="margin-top: 10%;">
+        선호 견과류:
+        <input type="radio" name="place" value="아몬드"> 아몬드
+        <input type="radio" name="place" value="호두"> 호두<br>
+        <input type="radio" name="place" value="땅콩"> 땅콩
+        <input type="radio" name="place" value="은행"> 은행
+        <input type="radio" name="place" value="마카다미아" checked> 마카다미아
+        <br><br>
+        수량: 
+        <select name="amount" >
+          <option value="0.5">500g 5000원</option>
+          <option value="1">1kg 9000원 </option>
+          <option value="2">2kg 15000원</option>
+          <option value="3">3kg 25000원</option>
+          <option value="4">4kg 33000원</option>
+          <option value="5">5kg 41000원</option>
+        </select>
+        <br><br>
+        <input type="button" value="장바구니" onclick="alert('장바구니에 담겼습니다!')">
+        <input type="submit" value="구매하기" >
+       </form>
+  
+       <br><br>
+       <h3 style="clear:both; margin-top: 10%;"> 견과류는 왜 필요한가?<br>
+          견과류의 놀라운 효능!<br> </h3>
+
+    <p style="text-align: center";> <br>
+        견과류의 80%를 구성하는 건강한 지방은 몸에 해로운 <br>
+        <b> 콜레스테롤 및 트리글리세리드 수치</b>를 낮춰줍니다!
+    </p>
+</article>
+<br>
+
+<article id="n">
+
+    <img src="image/nuts1.jpg"  >
+    <img src="image/nuts2.jpg" >
+    <img src="image/nuts3.jpg" >
+    <img src="image/nuts4.jpg">
+
+
+
+</article>
+
+</section>
+
+<aside>
+    <h3>광고</h3>
+    <h4>땅에서 식탁까지, 신선함 그대로!</h4>
+    <p> 가장 가까운 농장에서 바로 당신의 집으로!</p>
+    <img src="image/delivery.jpg" width="300" >
+    <img src="image/farm.jpg" width="300" >
+    <p> 오늘 수확한 신선한 야채와 채소를 매일 바로 배달해 드립니다.</p>
+
+    <ul>
+        <li>매일 아침 수확한 채소</li>
+        <li>현지 농장에서 직배송</li>
+        <li>환경을 생각한 로컬 푸드</li>
+        <li>신선도 100% 보장</li>
+        <li>주문 후 바로 배송</li>
+    </ul>
+    <p>귀한 손님을 위한 특별한 식탁, 건강한 일상을 위한 신선함을 누려보세요.</p>
+
+</aside>
+
+<footer>
+<span>회사소개</span> &nbsp;&nbsp;&nbsp; <span>개인정보보호 정책</span>&nbsp;&nbsp;&nbsp; <span>공지사항</span> &nbsp;&nbsp;&nbsp;<span>채용공고</span>
+</footer>
+
+</body>
+</html>
