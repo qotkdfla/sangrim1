@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <style>
+        html, body{height: 100%; font-family: Arial, Helvetica, sans-serif;}
+        header{padding: 20px; background-color: olive; color: white;}
+        nav{padding: 5px; background-color:cadetblue; color: white;}
+        nav ul li {display: inline; margin-right: 10px;}
+        a:link {color: #ffffff; text-decoration:none;}
+        a:visited {color: #ffffff;}
+        a:hover {color: rgb(215, 215, 215); }
+        footer{background-color: rgb(172, 172, 172); clear: both; text-align: center;
+            margin-top: 50px;}
+
+
+        section { margin-left: auto; margin-right: auto; text-align: center; width: 30%;}
+        fieldset {
+            padding: 1em;
+            background-color: rgb(236, 236, 236);
+            border: 2px solid rgb(201, 201, 201);
+            border-radius: 10px;
+            min-width: 0; 
+        }
+        fieldset+fieldset { margin-top: 1em;}
+
+        legend {
+            background-color:cadetblue; 
+            color: white;
+            padding: 0.2em 1em;
+            border-radius: 5px;
+        }
+
+        input[type=text] {border-radius:20px; width: 50%;}
+        input[type=password] {border-radius:20px; width: 70%;}
+        input[type=address] {border-radius:20px; width: 70%;}
+
+        input[type=button] {
+            padding: 0.3em;
+            background-color: cadetblue; 
+            color: white;
+            border: cadetblue;
+            border-radius: 5px;
+            width: 20%;
+        }
+        input[type=button]:hover{ background-color: rgb(89, 142, 144); color: rgb(215, 215, 215); }
+        
+        input[type=submit] {
+            padding: 0.3em;
+            background-color: cadetblue; 
+            color: white;
+            border: cadetblue;
+            border-radius: 5px;
+            width: 50%;
+        }
+        input[type=submit]:hover{ background-color: rgb(89, 142, 144); color: rgb(215, 215, 215); }
+
+        input[type=radio]{color: rgb(127, 149, 149);}
+
+            #g {color: cadetblue; margin-right: 20% ;text-align: right;}
+            #h {color: cadetblue;}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    
+        <header>
+            <h1><a href="index.html"> Veggig Shop</a></h1>
+        </header>
+        
+    <nav>
+        <ul>
+            <li><a href = "index.html#fruits"> Fresh Fruits </a></li>
+            <li><a href = "index.html#veggies"> Fresh Veggies </a></li>
+            <li><a href="index.html#salads">Fresh Salads</a></li>
+            <li><a href="index.html#nuts">Seeds and Nuts</a></li>
+            <li><a href="index.html#Box">Gift Box</a></li>
+            <li><a href="BMI.html">BMI계산기</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="membership.html">회원가입</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <section>
+
+        <form>
+        <fieldset>
+
+        <legend>회원가입</legend>
+        <label for="name">아이디</label><br>
+        <input type="text" name="name" id="text1">
+        <input type="button" value="중복검사"><br>
+        <label for="password1">패스워드</label><br>
+        <input type="password" name="password1"/><br>
+        <label for="password2">패스워드 확인</label><br>
+        <input type="password" name="password2"/><br>
+        <label for="address">주소</label><br>
+        <input type="address" name="address"/><br>
+
+        <br>
+        <label for="gender"><biv id="g"><b>성별</b></biv></label>
+        <input type="radio" name="gender" value="male">남성
+        <input type="radio" name="gender" value="female">여성 <br>
+
+        <br>
+    </fieldset>
+
+    <fieldset>
+        <label for="lovefruit"><biv id="h"><b>좋아하는 과일</b></biv></label><br>
+        <input type="checkbox" name="fruits" value="apple"> 사과
+        <input type="checkbox" name="fruits" value="banana"> 바나나
+        <input type="checkbox" name="fruits" value="grape"> 포도
+        <input type="checkbox" name="fruits" value="strawberry"> 딸기
+        <br>
+        <br>
+        <input type="submit" value="제출">
+
+        </fieldset>
+        </form>
+
+    </section>
+       
+    <footer>
+        <span>회사소개</span> &nbsp;&nbsp;&nbsp; <span>개인정보보호 정책</span>&nbsp;&nbsp;&nbsp; <span>공지사항</span> &nbsp;&nbsp;&nbsp;<span>채용공고</span>  
+    </footer>
+</body>
+</html>

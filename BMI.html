@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체질량 계산기</title>
+
+    <style>
+        html, body{height: 100%; font-family: Arial, Helvetica, sans-serif;}
+        header{padding: 20px; background-color: olive; color: white;}
+        nav{padding: 5px; background-color:cadetblue; color: white;}
+        nav ul li {display: inline; margin-right: 10px;}
+        a:link {color: #ffffff; text-decoration:none;}
+        a:visited {color: #ffffff;}
+        a:hover {color: rgb(215, 215, 215); }
+        footer{background-color: rgb(172, 172, 172); clear: both; text-align: center;
+        margin-top: 100px;}
+
+
+        section { margin-left: auto; margin-right: auto; text-align: center; width: 30%;}
+        fieldset {
+            padding: 1em;
+            background-color: rgb(236, 236, 236);
+            border: 2px solid rgb(201, 201, 201);
+            border-radius: 10px;
+            min-width: 0; 
+        }
+
+        legend {
+            background-color:cadetblue; 
+            color: white;
+            padding: 0.2em 1em;
+            border-radius: 5px;
+        }
+
+        input[type=weight] {border-radius:20px; width: 50%;}
+        input[type=height] {border-radius:20px; width: 50%;}
+
+        input[type=button] {
+            padding: 0.3em;
+            background-color: cadetblue; 
+            color: white;
+            border: cadetblue;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        input[type=button]:hover
+        { background-color: rgb(89, 142, 144);
+        color: rgb(215, 215, 215); }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1><a href="index.html"> Veggig Shop</a></h1>
+    </header>
+    
+<nav>
+    <ul>
+        <li><a href = "index.html#fruits"> Fresh Fruits </a></li>
+        <li><a href = "index.html#veggies"> Fresh Veggies </a></li>
+        <li><a href="index.html#salads">Fresh Salads</a></li>
+        <li><a href="index.html#nuts">Seeds and Nuts</a></li>
+        <li><a href="index.html#Box">Gift Box</a></li>
+        <li><a href="BMI.html">BMI계산기</a></li>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="membership.html">회원가입</a></li>
+    </ul>
+</nav>
+
+    <section>
+        <h1>체질량지수 계산기</h1>
+        신장(m):
+        <input id="height"><br>
+        체중(kg):
+        <input id="weight"><br>
+
+        <br>
+        <input type="button" value="계산" onclick="calc()">
+        <br>
+        <h3 id="result"></h3>
+        <h3 id="result2"></h3>
+        
+
+        
+    </section>
+
+    <script>
+
+        function calc(){
+        let w=document.getElementById("weight").value;
+        let h=document.getElementById("height").value;
+
+        let bmi = w/(h*h);
+        let bmi1 = bmi*1000;
+        let bmi2 = parseInt(bmi1);
+        let bmi3 = parseFloat(bmi2);
+        let bmi4 = bmi3/1000;
+        document.getElementById("result").innerHTML = bmi4;
+
+        if (bmi>=25)
+        { document.getElementById("result2").innerHTML = "비만입니다.";}
+        else if((bmi >=23) && (bmi<25))
+        { document.getElementById("result2").innerHTML = "과체중입니다.";}
+        else if((bmi >=18.5) && (bmi<23))
+        { document.getElementById("result2").innerHTML = "정상입니다.";}
+        else if((bmi <18.5) && (bmi<23))
+        { document.getElementById("result2").innerHTML = "저체중입니다.";}    
+        }
+    </script>
+
+<footer>
+    <span>회사소개</span> &nbsp;&nbsp;&nbsp; <span>개인정보보호 정책</span>&nbsp;&nbsp;&nbsp; <span>공지사항</span> &nbsp;&nbsp;&nbsp;<span>채용공고</span>  
+</footer>  
+</body>
+</html>
